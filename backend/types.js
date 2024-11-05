@@ -1,19 +1,15 @@
-const { create } = require("domain");
 const zod = require("zod");
 
+const createTodo = zod.object({
+    title: zod.string(),
+    description: zod.string()
+})
 
-const create_todo=zod.obj({
-    name:zod.string(),
-    desc:zod.string()
-});
+const updateTodo = zod.object({
+    id: zod.string(),
+})
 
-const update_todo=zod.obj({
-    id:zod.string(),
-   
-});
-
-
-module.exports={
-    createTodo: create_todo,
-    update_todo:update_todo
+module.exports = {
+    createTodo: createTodo,
+    updateTodo: updateTodo
 }

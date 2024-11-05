@@ -8,6 +8,3 @@ feature-
 - User can create a todo
 - User can see their existing todos
 - User can mark as done
-
-//intitalize a node project
-// put a package.json
